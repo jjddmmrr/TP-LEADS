@@ -18,7 +18,6 @@ PROSPECTO: Estado de una persona cuando registra un interés sobre algún vehíc
 </p>
 <p align="justify">
 <h3>CONTEXTO</h3>
-Cierre de Leads en Concesionario de Vehículos
 Los leads que llegan desde los diferentes canales digitales o presenciales de la empresa generan una carga operativa muy grande de los asesores comerciales, que deben comenzar a llamar a cada uno de los clientes para atenderles, y en ese proceso se encuentra muchos desistimientos ya sean por datos falsos, que compraron a la competencia, solo querían información, falta de stock, etc. y no se enfocan en lo clientes que si pueden ser potencialmente compradores de vehículos, a los cuales se les debe atender de una manera mucho más eficiente y en el menor tiempo posible.
 <br><br>
 La empresa cuanta con la base de datos de los clientes que están interesados en los vehículos, donde se almacena campos como: Canal, Fecha, Cliente, vehículo, etapa, contactado.   El departamento comercial también tiene datos de los vehículos que mas se venden por los diferentes canales de venta, numero de contactos, numero de veces que cotizaron.
@@ -26,6 +25,44 @@ El Gerente Comercial necesita mejorar la productividad de la fuerza de ventas pa
 <br><br>
 Se va a analizar las ventas de todos los concesionarios agrupados hasta el nivel de asesor de venta, identificado por los modelos de vehículos, versiones y años de los mismos, para encontrar información que permita identificar el comportamiento de los clientes que están realizando las compras de vehículos.
 </p>
+
+<p align="justify">
+<h3>OBJETIVOS</h3>
+1.	Identificar el ingreso de los leads ya sean estos de manera digital o presencial dentro de toda la red de concesionarios de vehículos en un determinado tiempo.
+<br><br>
+2.	Visualizar como se esta distribuyendo los leads a nivel nacional, tanto en cada una de las ciudades y vitrinas para ver el impacto de las acciones comerciales a donde estan dirigiendose.
+<br><br>
+3.	Conocer que modelos de vehículos son los mas requeridos por los clientes en los diferentes canales y medios de atención.
+<br><br>
+4.	Verificar la productividad de la fuerza de ventas, tanto en la asignación de los leas como el cierre de ventas en tiempos oportunos.
+</p>
+
+<p align="justify">
+<h3>DESCRIPCIÓN DE LOS DATOS</h3>
+<h4>GENERAL</h4>
+<h5>Algunos pasos útiles para la limpieza de datos</h5>
+Antes de usar algún algoritmo de aprendizaje automático o un modelo estadístico, siempre tenemos que limpiar los datos. Ningún modelo crea resultados significativos con datos "sucios". La limpieza o depuración de datos es el proceso de detectar y corregir (o eliminar) registros corruptos o inexactos de un conjunto de registros, tabla o base de datos y se refiere a la identificación de partes incompletas, incorrectas, inexactas o irrelevantes de los datos y luego reemplazar, modificar o eliminar los datos sucios.
+<br><br>
+Ciertamente esta parte no es muy divertida y requiere mucho tiempo.
+<br><br>
+Vamos a usar el conjunto de datos de un CRM de Vehículos a nivel de un Importador de Marca en el País de Colombia que para el proyecto lo llamaremos KHVMOTORS, siendo un nombre de ejemplo por la ley de proyección de datos en ese país, echemos un breve vistazo a los datos.
+<br>
+<h4>INFORMACION ADICIONAL</h4>
+<h5>Generación de los Ficheros</h5>
+Tenemos 4 archivos de datos que fueron descargados de la Plataforma CRM de KHVMOTORS desde vistas que contiene los datos que vamos a analizar en este proyecto, las cuales ya previamente contienen limpieza de datos dentro de la misma Plataforma CRM, luego de eso realice dentro de la misma Base de datos Oracle una consulta entre los dataset iniciales (clientes.csv, historico_de_leads.csv, vehiculos.csv, leads_vs_venta.csv) para sacar los resultados de la tabla de salida (dsvehven.xls) de la Actividad de este TRABAJO PRÁCTICO que es con la que vamos a trabajar y contiene toda la información para el análisis  del presente trabajo, en esa consulta en la extracción de la información realice un proceso previo de limpieza de datos utilizando el tratamiento de Missing Values y Outliers.
+<br><br>
+En los campos numéricos colocar 0 por defecto
+<br><br>
+1.	Si no tiene Asesor de Venta colocar Usuario Concesionario<br>
+2.	Si no tiene Etapa colocar PROSPECCION<br>
+3.	Si no tiene Canal colocar PRESENCIAL CLIENTE<br>
+4.	Si no tiene Medio colocar TRAFICO SALA<br><br>
+Pero en los cruces de la consultas existen todavia datos que debemos realizar todo el proceso de DataCleanning.
+<br><br>
+
+
+</p>
+
 <iframe width="794" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQvYrZgd1ZiQEmr8iUGC0cu1oUI6nNcIhC6fWAmKEljvZ38RodSv1J1EMbngyXKHR8i7gkUsTOXwpQt/pubchart?oid=2134827719&amp;format=interactive"></iframe>
 <br>
 
